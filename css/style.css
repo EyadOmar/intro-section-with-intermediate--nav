@@ -1,3 +1,12 @@
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
 body {
   font-family: "Epilogue", sans-serif;
 }
