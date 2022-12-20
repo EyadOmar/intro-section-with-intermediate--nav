@@ -96,13 +96,8 @@ header .right {
   gap: 20px;
 }
 header .right button {
-  outline: none;
-  border: 0;
-  padding: 10px 20px;
   color: var(--medium-gray);
   background: none;
-  transition: 0.3s;
-  cursor: pointer;
 }
 header .right .register {
   border-radius: 15px;
@@ -153,5 +148,83 @@ header .right button:hover {
   header .right {
     flex-direction: column;
     animation: appear-from-right 500ms forwards;
+  }
+}
+/* -------------------------------------------- */
+/* ----------------landing---------------------- */
+/* -------------------------------------------- */
+.landing .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 150px;
+  position: relative;
+  padding-top: 60px;
+  min-height: calc(100vh - 200px);
+}
+.landing article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.landing article h1 {
+  font-size: 4rem;
+  color: var(--almost-black);
+  line-height: 1;
+}
+.landing article p {
+  color: var(--medium-gray);
+}
+.landing article button {
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  padding: 10px 30px;
+}
+.landing .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+.landing .hero {
+  background-image: url("../images/image-hero-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 450px;
+  height: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .landing .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0;
+    gap: 40px;
+  }
+  .landing article {
+    order: 2;
+    align-items: center;
+    padding-inline: 15px;
+    text-align: center;
+    gap: 20px;
+  }
+  .landing article h1 {
+    font-size: 2rem;
+  }
+  .landing .images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+  }
+  .landing .hero {
+    background-image: url("../images/image-hero-mobile.png");
+    width: auto;
   }
 }

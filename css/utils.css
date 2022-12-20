@@ -30,6 +30,13 @@
     width: 1320px;
   }
 }
+button {
+  outline: none;
+  border: 0;
+  padding: 10px 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
 .overlay {
   position: absolute;
   width: 100vw;
