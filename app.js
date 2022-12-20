@@ -102,19 +102,17 @@ const menuBtn = document.getElementById("menu-btn");
 const closeBtn = document.createElement("img");
 closeBtn.src = "./images/icon-close-menu.svg";
 closeBtn.alt = "close";
-const overlay = document.createElement("div");
-overlay.classList.add("overlay");
 
 menuBtn.addEventListener("click", () => {
   menuBtn.style.display = "none";
   navBox.style.display = "flex";
   document.querySelector("header .container").appendChild(closeBtn);
-  document.body.appendChild(overlay);
+  document.body.classList.add("dimmed");
 });
 
 closeBtn.addEventListener("click", () => {
   menuBtn.style.display = "block";
   navBox.style.display = "none";
   document.querySelector("header .container").removeChild(closeBtn);
-  document.body.removeChild(overlay);
+  document.body.classList.remove("dimmed");
 });
