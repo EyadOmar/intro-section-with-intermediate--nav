@@ -188,6 +188,13 @@ header .right button:hover {
   background-color: black;
   border-radius: 15px;
   padding: 10px 30px;
+  transition: all 500ms;
+  border: 2px solid transparent;
+}
+.landing article button:hover {
+  color: var(--almost-black);
+  background: none;
+  border: 2px solid var(--almost-black);
 }
 .landing .images {
   display: flex;
